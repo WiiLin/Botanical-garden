@@ -5,7 +5,7 @@
 //  Created by Wii Lin on 2021/4/12.
 //
 
-import Foundation
+import UIKit
 
 typealias TResultHandler = ((Bool) -> Void)?
 protocol TMainViewModelDelegate: class {
@@ -47,8 +47,35 @@ class BGMainViewModel {
     func loadNextPageData(resultHandler: TResultHandler = nil) {
         loadData(offset: currentOffset + page, resultHandler: resultHandler)
     }
+    
+    func updateContentOffset(contentOffset: CGPoint) -> CGPoint? {
+        let downRange = 0.0...65.0
+        let upRange = 66.0...BGNavigationBar.height
+        if downRange.contains(Double(contentOffset.y)) {
+            return .zero
+        } else if upRange.contains(contentOffset.y) {
+            return .init(x: 0, y: BGNavigationBar.height)
+        } else {
+            return nil
+        }
+    }
+    
+    func updateTitleViewTopConstraint(contentOffset: CGPoint) -> CGFloat {
+        let offset = BGNavigationBar.height - contentOffset.y
+        if offset <= 0 {
+            return 0
+        } else if offset >= BGNavigationBar.height {
+            return BGNavigationBar.height
+        }
+        return offset
+    }
 
-    private func loadData(offset: UInt, resultHandler: TResultHandler = nil) {
+   
+}
+
+// MARK: - Private
+private extension BGMainViewModel {
+    func loadData(offset: UInt, resultHandler: TResultHandler = nil) {
         guard isFinished == false else { return }
         guard isLoading == false else { return }
         delegate?.loadingData()

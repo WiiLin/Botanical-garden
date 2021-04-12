@@ -17,7 +17,10 @@ class BGMainViewController: UIViewController, AlertPresentable {
             tableView.register(UINib(nibName: "\(BGMainCell.self)", bundle: nil), forCellReuseIdentifier: "\(BGMainCell.self)")
         }
     }
-
+    @IBOutlet weak var titleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    var navigationBar: BGNavigationBar!
+    
     // MARK: - Properties
 
     private let viewModel: BGMainViewModel = BGMainViewModel()
@@ -26,7 +29,21 @@ class BGMainViewController: UIViewController, AlertPresentable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         viewModel.delegate = self
+    }
+}
+
+// MARK: - private method
+private extension BGMainViewController {
+    func setupNavigationBar() {
+        navigationBar = Bundle.main.loadNibNamed("\(BGNavigationBar.self)", owner: self, options: nil)!.first as! BGNavigationBar
+        view.insertSubview(navigationBar, belowSubview: tableView)
+        navigationBar.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.height.equalTo(BGNavigationBar.height)
+        }
     }
 }
 
@@ -85,5 +102,26 @@ extension BGMainViewController: TMainViewModelDelegate {
 
     func loadingData() {
         HUD.show(.progress, onView: view)
+    }
+}
+
+
+extension BGMainViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateTitleViewLayout(scrollView)
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        guard let update = viewModel.updateContentOffset(contentOffset: scrollView.contentOffset) else {
+            return
+        }
+        scrollView.setContentOffset(update, animated: true)
+    }
+    
+    func updateTitleViewLayout(_ scrollView: UIScrollView) {
+        let offset = viewModel.updateTitleViewTopConstraint(contentOffset: scrollView.contentOffset)
+        titleViewTopConstraint.constant = offset
+        titleLabel.alpha = 1 - (offset / BGNavigationBar.height)
+        navigationBar.alpha = offset / BGNavigationBar.height
     }
 }

@@ -28,6 +28,9 @@
 		2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4EB26243B7700F1F34C /* AlertPresentable.swift */; };
 		2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */; };
 		2835C4FB26243C5400F1F34C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4FA26243C5400F1F34C /* SnapKit */; };
+		28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37D626245317008035A9 /* BGNavigationController.swift */; };
+		28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37F3262486F0008035A9 /* BGNavigationBar.swift */; };
+		28ED380126248714008035A9 /* BGNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28ED380026248714008035A9 /* BGNavigationBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		2835C4E5262439A900F1F34C /* BGMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainViewModel.swift; sourceTree = "<group>"; };
 		2835C4EB26243B7700F1F34C /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
+		28ED37D626245317008035A9 /* BGNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationController.swift; sourceTree = "<group>"; };
+		28ED37F3262486F0008035A9 /* BGNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationBar.swift; sourceTree = "<group>"; };
+		28ED380026248714008035A9 /* BGNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGNavigationBar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		2835C4302623F63900F1F34C /* BotanicalGarden */ = {
 			isa = PBXGroup;
 			children = (
+				28ED37D5262452DA008035A9 /* Component */,
 				2835C4F026243C1900F1F34C /* Extension */,
 				2835C4EA26243B6A00F1F34C /* Protocol */,
 				2835C4D2262435D800F1F34C /* Main */,
@@ -201,6 +208,16 @@
 				2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		28ED37D5262452DA008035A9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				28ED37D626245317008035A9 /* BGNavigationController.swift */,
+				28ED37F3262486F0008035A9 /* BGNavigationBar.swift */,
+				28ED380026248714008035A9 /* BGNavigationBar.xib */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28ED380126248714008035A9 /* BGNavigationBar.xib in Resources */,
 				2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */,
 				2835C4E12624377C00F1F34C /* BGMainCell.xib in Resources */,
 				2835C43B2623F63A00F1F34C /* Assets.xcassets in Resources */,
@@ -347,8 +365,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */,
 				2835C4922624139900F1F34C /* BGApiBase.swift in Sources */,
 				2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */,
+				28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */,
 				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
 				2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */,
 				2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */,
