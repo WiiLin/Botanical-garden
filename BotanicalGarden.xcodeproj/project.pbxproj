@@ -23,6 +23,7 @@
 		2835C4B9262418F800F1F34C /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BGApi.swift */; };
 		2835C4C82624331D00F1F34C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4C72624331D00F1F34C /* PKHUD */; };
 		2835C4CE2624335600F1F34C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4CD2624335600F1F34C /* Kingfisher */; };
+		2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */; };
 		2835C4FB26243C5400F1F34C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4FA26243C5400F1F34C /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		2835C48A2624139900F1F34C /* BGApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiBase.swift; sourceTree = "<group>"; };
 		2835C4B02624169A00F1F34C /* BGApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApiPath.swift; sourceTree = "<group>"; };
 		2835C4B8262418F800F1F34C /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
+		2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,14 @@
 				2835C4B8262418F800F1F34C /* BGApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		2835C4F026243C1900F1F34C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2835C4922624139900F1F34C /* BGApiBase.swift in Sources */,
+				2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */,
 				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
 				2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */,
 				2835C4362623F63900F1F34C /* BGMainViewController.swift in Sources */,
