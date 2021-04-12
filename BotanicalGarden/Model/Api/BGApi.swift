@@ -6,6 +6,7 @@
 //
 
 import Alamofire
+import Foundation
 
 struct BGEmpty: Codable {}
 
@@ -34,8 +35,8 @@ struct BotanicalListApi:BGApi, Encodable {
     
     let scope: String
     let q: String
-    let limit: Int
-    let offset: Int
+    let limit: UInt
+    let offset: UInt
     
 }
 
@@ -44,7 +45,7 @@ struct BGBotanical: Decodable {
     let name: String
     let location: String
     let feature: String
-    let imageUrl: String
+    let imageUrl: URL
     
     private enum CodingKeys : String, CodingKey {
         case name = "F_Name_Ch"
@@ -57,7 +58,7 @@ struct BGBotanical: Decodable {
         name = try container.decode(String.self, forKey: .name)
         location = try container.decode(String.self, forKey: .location)
         feature = try container.decode(String.self, forKey: .feature)
-        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+        imageUrl = try container.decode(URL.self, forKey: .imageUrl)
     }
     
 }

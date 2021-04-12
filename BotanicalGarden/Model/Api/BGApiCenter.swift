@@ -9,7 +9,7 @@ import Foundation
 
 class BGApiCenter: BGApiBase {
     static let shared: BGApiCenter = BGApiCenter()
-    func getBGBotanicalList(limit: Int, offset: Int, completionHandler: @escaping (Result<[BGBotanical], BGError>) -> Void) {
+    func getBGBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<[BGBotanical], BGError>) -> Void) {
         let api = BotanicalListApi(scope: "resourceAquire", q: "", limit: 1, offset: 1)
         request(api: api,
                 responseType: BotanicalListApi.ResponseType.self) { result in
