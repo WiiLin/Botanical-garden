@@ -22,6 +22,7 @@
 		2835C4B12624169B00F1F34C /* BGApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B02624169A00F1F34C /* BGApiPath.swift */; };
 		2835C4B9262418F800F1F34C /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BGApi.swift */; };
 		2835C4C82624331D00F1F34C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4C72624331D00F1F34C /* PKHUD */; };
+		2835C4CE2624335600F1F34C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4CD2624335600F1F34C /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2835C4CE2624335600F1F34C /* Kingfisher in Frameworks */,
 				2835C4712623FC4E00F1F34C /* Alamofire in Frameworks */,
 				2835C4C82624331D00F1F34C /* PKHUD in Frameworks */,
 			);
@@ -182,6 +184,7 @@
 			packageProductDependencies = (
 				2835C4702623FC4E00F1F34C /* Alamofire */,
 				2835C4C72624331D00F1F34C /* PKHUD */,
+				2835C4CD2624335600F1F34C /* Kingfisher */,
 			);
 			productName = BotanicalGarden;
 			productReference = 2835C42E2623F63900F1F34C /* BotanicalGarden.app */;
@@ -258,6 +261,7 @@
 			packageReferences = (
 				2835C46F2623FC4E00F1F34C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2835C4C62624331D00F1F34C /* XCRemoteSwiftPackageReference "PKHUD" */,
+				2835C4CC2624335600F1F34C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2835C42F2623F63900F1F34C /* Products */;
 			projectDirPath = "";
@@ -660,6 +664,14 @@
 				minimumVersion = 5.4.0;
 			};
 		};
+		2835C4CC2624335600F1F34C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -672,6 +684,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2835C4C62624331D00F1F34C /* XCRemoteSwiftPackageReference "PKHUD" */;
 			productName = PKHUD;
+		};
+		2835C4CD2624335600F1F34C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2835C4CC2624335600F1F34C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
