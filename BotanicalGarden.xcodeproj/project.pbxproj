@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2835C4322623F63900F1F34C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4312623F63900F1F34C /* AppDelegate.swift */; };
+		2835C4342623F63900F1F34C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4332623F63900F1F34C /* SceneDelegate.swift */; };
+		2835C4362623F63900F1F34C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4352623F63900F1F34C /* ViewController.swift */; };
+		2835C4392623F63900F1F34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2835C4372623F63900F1F34C /* Main.storyboard */; };
+		2835C43B2623F63A00F1F34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2835C43A2623F63A00F1F34C /* Assets.xcassets */; };
+		2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */; };
+		2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */; };
+		2835C4542623F63A00F1F34C /* BotanicalGardenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2835C4452623F63A00F1F34C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2835C4262623F63900F1F34C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2835C42D2623F63900F1F34C;
+			remoteInfo = BotanicalGarden;
+		};
+		2835C4502623F63A00F1F34C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2835C4262623F63900F1F34C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2835C42D2623F63900F1F34C;
+			remoteInfo = BotanicalGarden;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2835C42E2623F63900F1F34C /* BotanicalGarden.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BotanicalGarden.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2835C4312623F63900F1F34C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2835C4332623F63900F1F34C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2835C4352623F63900F1F34C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2835C4382623F63900F1F34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2835C43A2623F63A00F1F34C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2835C43D2623F63A00F1F34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2835C43F2623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2835C4442623F63A00F1F34C /* BotanicalGardenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotanicalGardenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalGardenTests.swift; sourceTree = "<group>"; };
+		2835C44A2623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2835C44F2623F63A00F1F34C /* BotanicalGardenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotanicalGardenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalGardenUITests.swift; sourceTree = "<group>"; };
+		2835C4552623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2835C42B2623F63900F1F34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C4412623F63A00F1F34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C44C2623F63A00F1F34C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2835C4252623F63900F1F34C = {
+			isa = PBXGroup;
+			children = (
+				2835C4302623F63900F1F34C /* BotanicalGarden */,
+				2835C4472623F63A00F1F34C /* BotanicalGardenTests */,
+				2835C4522623F63A00F1F34C /* BotanicalGardenUITests */,
+				2835C42F2623F63900F1F34C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2835C42F2623F63900F1F34C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2835C42E2623F63900F1F34C /* BotanicalGarden.app */,
+				2835C4442623F63A00F1F34C /* BotanicalGardenTests.xctest */,
+				2835C44F2623F63A00F1F34C /* BotanicalGardenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2835C4302623F63900F1F34C /* BotanicalGarden */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4312623F63900F1F34C /* AppDelegate.swift */,
+				2835C4332623F63900F1F34C /* SceneDelegate.swift */,
+				2835C4352623F63900F1F34C /* ViewController.swift */,
+				2835C4372623F63900F1F34C /* Main.storyboard */,
+				2835C43A2623F63A00F1F34C /* Assets.xcassets */,
+				2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */,
+				2835C43F2623F63A00F1F34C /* Info.plist */,
+			);
+			path = BotanicalGarden;
+			sourceTree = "<group>";
+		};
+		2835C4472623F63A00F1F34C /* BotanicalGardenTests */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */,
+				2835C44A2623F63A00F1F34C /* Info.plist */,
+			);
+			path = BotanicalGardenTests;
+			sourceTree = "<group>";
+		};
+		2835C4522623F63A00F1F34C /* BotanicalGardenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */,
+				2835C4552623F63A00F1F34C /* Info.plist */,
+			);
+			path = BotanicalGardenUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2835C42D2623F63900F1F34C /* BotanicalGarden */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2835C4582623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGarden" */;
+			buildPhases = (
+				2835C42A2623F63900F1F34C /* Sources */,
+				2835C42B2623F63900F1F34C /* Frameworks */,
+				2835C42C2623F63900F1F34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BotanicalGarden;
+			productName = BotanicalGarden;
+			productReference = 2835C42E2623F63900F1F34C /* BotanicalGarden.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2835C4432623F63A00F1F34C /* BotanicalGardenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2835C45B2623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGardenTests" */;
+			buildPhases = (
+				2835C4402623F63A00F1F34C /* Sources */,
+				2835C4412623F63A00F1F34C /* Frameworks */,
+				2835C4422623F63A00F1F34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2835C4462623F63A00F1F34C /* PBXTargetDependency */,
+			);
+			name = BotanicalGardenTests;
+			productName = BotanicalGardenTests;
+			productReference = 2835C4442623F63A00F1F34C /* BotanicalGardenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2835C44E2623F63A00F1F34C /* BotanicalGardenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2835C45E2623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGardenUITests" */;
+			buildPhases = (
+				2835C44B2623F63A00F1F34C /* Sources */,
+				2835C44C2623F63A00F1F34C /* Frameworks */,
+				2835C44D2623F63A00F1F34C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2835C4512623F63A00F1F34C /* PBXTargetDependency */,
+			);
+			name = BotanicalGardenUITests;
+			productName = BotanicalGardenUITests;
+			productReference = 2835C44F2623F63A00F1F34C /* BotanicalGardenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2835C4262623F63900F1F34C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					2835C42D2623F63900F1F34C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					2835C4432623F63A00F1F34C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2835C42D2623F63900F1F34C;
+					};
+					2835C44E2623F63A00F1F34C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2835C42D2623F63900F1F34C;
+					};
+				};
+			};
+			buildConfigurationList = 2835C4292623F63900F1F34C /* Build configuration list for PBXProject "BotanicalGarden" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2835C4252623F63900F1F34C;
+			productRefGroup = 2835C42F2623F63900F1F34C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2835C42D2623F63900F1F34C /* BotanicalGarden */,
+				2835C4432623F63A00F1F34C /* BotanicalGardenTests */,
+				2835C44E2623F63A00F1F34C /* BotanicalGardenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2835C42C2623F63900F1F34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */,
+				2835C43B2623F63A00F1F34C /* Assets.xcassets in Resources */,
+				2835C4392623F63900F1F34C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C4422623F63A00F1F34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C44D2623F63A00F1F34C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2835C42A2623F63900F1F34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2835C4362623F63900F1F34C /* ViewController.swift in Sources */,
+				2835C4322623F63900F1F34C /* AppDelegate.swift in Sources */,
+				2835C4342623F63900F1F34C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C4402623F63A00F1F34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2835C44B2623F63A00F1F34C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2835C4542623F63A00F1F34C /* BotanicalGardenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2835C4462623F63A00F1F34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2835C42D2623F63900F1F34C /* BotanicalGarden */;
+			targetProxy = 2835C4452623F63A00F1F34C /* PBXContainerItemProxy */;
+		};
+		2835C4512623F63A00F1F34C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2835C42D2623F63900F1F34C /* BotanicalGarden */;
+			targetProxy = 2835C4502623F63A00F1F34C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2835C4372623F63900F1F34C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2835C4382623F63900F1F34C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2835C43D2623F63A00F1F34C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2835C4562623F63A00F1F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2835C4572623F63A00F1F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2835C4592623F63A00F1F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGarden/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGarden;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2835C45A2623F63A00F1F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGarden/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGarden;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2835C45C2623F63A00F1F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGardenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGardenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BotanicalGarden.app/BotanicalGarden";
+			};
+			name = Debug;
+		};
+		2835C45D2623F63A00F1F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGardenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGardenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BotanicalGarden.app/BotanicalGarden";
+			};
+			name = Release;
+		};
+		2835C45F2623F63A00F1F34C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGardenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGardenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BotanicalGarden;
+			};
+			name = Debug;
+		};
+		2835C4602623F63A00F1F34C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = BotanicalGardenUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.BotanicalGardenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BotanicalGarden;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2835C4292623F63900F1F34C /* Build configuration list for PBXProject "BotanicalGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2835C4562623F63A00F1F34C /* Debug */,
+				2835C4572623F63A00F1F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2835C4582623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGarden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2835C4592623F63A00F1F34C /* Debug */,
+				2835C45A2623F63A00F1F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2835C45B2623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGardenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2835C45C2623F63A00F1F34C /* Debug */,
+				2835C45D2623F63A00F1F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2835C45E2623F63A00F1F34C /* Build configuration list for PBXNativeTarget "BotanicalGardenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2835C45F2623F63A00F1F34C /* Debug */,
+				2835C4602623F63A00F1F34C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2835C4262623F63900F1F34C /* Project object */;
+}
