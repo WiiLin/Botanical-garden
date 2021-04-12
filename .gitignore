@@ -74,3 +74,4 @@ Framework
 node_modules
 
 vendor
+*.xcuserstate
