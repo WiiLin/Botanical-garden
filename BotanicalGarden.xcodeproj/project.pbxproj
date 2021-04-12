@@ -16,6 +16,11 @@
 		2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */; };
 		2835C4542623F63A00F1F34C /* BotanicalGardenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */; };
 		2835C4712623FC4E00F1F34C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4702623FC4E00F1F34C /* Alamofire */; };
+		2835C48D2624139900F1F34C /* BGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4852624139900F1F34C /* BGError.swift */; };
+		2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4872624139900F1F34C /* BGApiCenter.swift */; };
+		2835C4922624139900F1F34C /* BGApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C48A2624139900F1F34C /* BGApiBase.swift */; };
+		2835C4B12624169B00F1F34C /* BGApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B02624169A00F1F34C /* BGApiPath.swift */; };
+		2835C4B9262418F800F1F34C /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BGApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,11 @@
 		2835C44F2623F63A00F1F34C /* BotanicalGardenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotanicalGardenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalGardenUITests.swift; sourceTree = "<group>"; };
 		2835C4552623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2835C4852624139900F1F34C /* BGError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGError.swift; sourceTree = "<group>"; };
+		2835C4872624139900F1F34C /* BGApiCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiCenter.swift; sourceTree = "<group>"; };
+		2835C48A2624139900F1F34C /* BGApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiBase.swift; sourceTree = "<group>"; };
+		2835C4B02624169A00F1F34C /* BGApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApiPath.swift; sourceTree = "<group>"; };
+		2835C4B8262418F800F1F34C /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		2835C4302623F63900F1F34C /* BotanicalGarden */ = {
 			isa = PBXGroup;
 			children = (
+				2835C4832624139900F1F34C /* Model */,
 				2835C4312623F63900F1F34C /* AppDelegate.swift */,
 				2835C4332623F63900F1F34C /* SceneDelegate.swift */,
 				2835C4352623F63900F1F34C /* ViewController.swift */,
@@ -128,6 +139,26 @@
 				2835C4552623F63A00F1F34C /* Info.plist */,
 			);
 			path = BotanicalGardenUITests;
+			sourceTree = "<group>";
+		};
+		2835C4832624139900F1F34C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4842624139900F1F34C /* Api */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2835C4842624139900F1F34C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2835C48A2624139900F1F34C /* BGApiBase.swift */,
+				2835C4872624139900F1F34C /* BGApiCenter.swift */,
+				2835C4852624139900F1F34C /* BGError.swift */,
+				2835C4B02624169A00F1F34C /* BGApiPath.swift */,
+				2835C4B8262418F800F1F34C /* BGApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2835C4922624139900F1F34C /* BGApiBase.swift in Sources */,
+				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
+				2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */,
 				2835C4362623F63900F1F34C /* ViewController.swift in Sources */,
+				2835C48D2624139900F1F34C /* BGError.swift in Sources */,
 				2835C4322623F63900F1F34C /* AppDelegate.swift in Sources */,
+				2835C4B12624169B00F1F34C /* BGApiPath.swift in Sources */,
 				2835C4342623F63900F1F34C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
