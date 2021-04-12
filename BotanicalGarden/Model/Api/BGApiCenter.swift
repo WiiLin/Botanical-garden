@@ -9,16 +9,10 @@ import Foundation
 
 class BGApiCenter: BGApiBase {
     static let shared: BGApiCenter = BGApiCenter()
-    func getBGBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<[BGBotanical], BGError>) -> Void) {
-        let api = BotanicalListApi(scope: "resourceAquire", q: "", limit: 1, offset: 1)
+    func getBGBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<BotanicalListApi.ResponseType, BGError>) -> Void) {
+        let api = BotanicalListApi(scope: "resourceAquire", q: "", limit: limit, offset: offset)
         request(api: api,
-                responseType: BotanicalListApi.ResponseType.self) { result in
-            switch result {
-            case let .success(response):
-                completionHandler(.success(response.result.results))
-            case let .failure(error):
-                completionHandler(.failure(error))
-            }
-        }
+                responseType: BotanicalListApi.ResponseType.self,
+                completionHandler: completionHandler)
     }
 }
