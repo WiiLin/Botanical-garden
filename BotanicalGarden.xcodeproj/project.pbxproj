@@ -22,6 +22,9 @@
 		2835C4B9262418F800F1F34C /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BGApi.swift */; };
 		2835C4C82624331D00F1F34C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4C72624331D00F1F34C /* PKHUD */; };
 		2835C4CE2624335600F1F34C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4CD2624335600F1F34C /* Kingfisher */; };
+		2835C4E02624377C00F1F34C /* BGMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4DE2624377C00F1F34C /* BGMainCell.swift */; };
+		2835C4E12624377C00F1F34C /* BGMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2835C4DF2624377C00F1F34C /* BGMainCell.xib */; };
+		2835C4E6262439A900F1F34C /* BGMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4E5262439A900F1F34C /* BGMainViewModel.swift */; };
 		2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4EB26243B7700F1F34C /* AlertPresentable.swift */; };
 		2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */; };
 		2835C4FB26243C5400F1F34C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4FA26243C5400F1F34C /* SnapKit */; };
@@ -63,6 +66,9 @@
 		2835C48A2624139900F1F34C /* BGApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiBase.swift; sourceTree = "<group>"; };
 		2835C4B02624169A00F1F34C /* BGApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApiPath.swift; sourceTree = "<group>"; };
 		2835C4B8262418F800F1F34C /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
+		2835C4DE2624377C00F1F34C /* BGMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainCell.swift; sourceTree = "<group>"; };
+		2835C4DF2624377C00F1F34C /* BGMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGMainCell.xib; sourceTree = "<group>"; };
+		2835C4E5262439A900F1F34C /* BGMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainViewModel.swift; sourceTree = "<group>"; };
 		2835C4EB26243B7700F1F34C /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,9 +125,11 @@
 		2835C4302623F63900F1F34C /* BotanicalGarden */ = {
 			isa = PBXGroup;
 			children = (
+				2835C4F026243C1900F1F34C /* Extension */,
+				2835C4EA26243B6A00F1F34C /* Protocol */,
+				2835C4D2262435D800F1F34C /* Main */,
 				2835C4832624139900F1F34C /* Model */,
 				2835C4312623F63900F1F34C /* AppDelegate.swift */,
-				2835C4352623F63900F1F34C /* BGMainViewController.swift */,
 				2835C4372623F63900F1F34C /* Main.storyboard */,
 				2835C43A2623F63A00F1F34C /* Assets.xcassets */,
 				2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */,
@@ -166,6 +174,17 @@
 				2835C4B8262418F800F1F34C /* BGApi.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		2835C4D2262435D800F1F34C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2835C4352623F63900F1F34C /* BGMainViewController.swift */,
+				2835C4DE2624377C00F1F34C /* BGMainCell.swift */,
+				2835C4DF2624377C00F1F34C /* BGMainCell.xib */,
+				2835C4E5262439A900F1F34C /* BGMainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		2835C4EA26243B6A00F1F34C /* Protocol */ = {
@@ -301,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */,
+				2835C4E12624377C00F1F34C /* BGMainCell.xib in Resources */,
 				2835C43B2623F63A00F1F34C /* Assets.xcassets in Resources */,
 				2835C4392623F63900F1F34C /* Main.storyboard in Resources */,
 			);
@@ -332,8 +352,10 @@
 				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
 				2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */,
 				2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */,
+				2835C4E02624377C00F1F34C /* BGMainCell.swift in Sources */,
 				2835C4362623F63900F1F34C /* BGMainViewController.swift in Sources */,
 				2835C48D2624139900F1F34C /* BGError.swift in Sources */,
+				2835C4E6262439A900F1F34C /* BGMainViewModel.swift in Sources */,
 				2835C4322623F63900F1F34C /* AppDelegate.swift in Sources */,
 				2835C4B12624169B00F1F34C /* BGApiPath.swift in Sources */,
 			);

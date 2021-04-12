@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BGMainCell" rowHeight="176" id="Exz-sK-RWs" customClass="BGMainCell" customModule="BotanicalGarden" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Exz-sK-RWs" id="TvW-7F-tTB">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-y9-Pgi">
+                        <rect key="frame" x="20" y="15" width="150" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ebQ-y9-Pgi" secondAttribute="height" multiplier="12:8" id="UK3-FO-abf"/>
+                            <constraint firstAttribute="width" constant="150" id="p3G-rJ-noj"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l6I-4L-hPv">
+                        <rect key="frame" x="185" y="15" width="189" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VI-pS-Z2B">
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hn7-uC-Ijh">
+                                <rect key="frame" x="0.0" y="36.5" width="189" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="feature" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERX-Mp-Wb3">
+                        <rect key="frame" x="20" y="125" width="374" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                        <color key="textColor" red="0.29019607843137257" green="0.29019607843137257" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l6I-4L-hPv" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ebQ-y9-Pgi" secondAttribute="bottom" id="0wQ-fg-wiL"/>
+                    <constraint firstItem="ebQ-y9-Pgi" firstAttribute="leading" secondItem="TvW-7F-tTB" secondAttribute="leading" constant="20" id="4x1-bj-ChW"/>
+                    <constraint firstItem="l6I-4L-hPv" firstAttribute="leading" secondItem="ebQ-y9-Pgi" secondAttribute="trailing" constant="15" id="AMZ-2y-A8W"/>
+                    <constraint firstAttribute="trailing" secondItem="ERX-Mp-Wb3" secondAttribute="trailing" constant="20" id="Ded-Xb-sYd"/>
+                    <constraint firstItem="ERX-Mp-Wb3" firstAttribute="leading" secondItem="ebQ-y9-Pgi" secondAttribute="leading" id="QLc-BP-JUO"/>
+                    <constraint firstAttribute="bottom" secondItem="ERX-Mp-Wb3" secondAttribute="bottom" constant="15" id="Tm0-1F-32I"/>
+                    <constraint firstItem="ebQ-y9-Pgi" firstAttribute="top" secondItem="TvW-7F-tTB" secondAttribute="top" constant="15" id="dr2-1s-4ia"/>
+                    <constraint firstItem="ERX-Mp-Wb3" firstAttribute="top" secondItem="ebQ-y9-Pgi" secondAttribute="bottom" constant="10" id="fDi-a7-Lqa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="l6I-4L-hPv" secondAttribute="trailing" constant="20" id="iLo-z1-aHu"/>
+                    <constraint firstItem="l6I-4L-hPv" firstAttribute="top" secondItem="ebQ-y9-Pgi" secondAttribute="top" id="sRw-gt-gVG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="coverImageView" destination="ebQ-y9-Pgi" id="8TZ-Mh-dUP"/>
+                <outlet property="featureLabel" destination="ERX-Mp-Wb3" id="eYZ-84-tkT"/>
+                <outlet property="locationLabel" destination="Hn7-uC-Ijh" id="Gvu-EK-suR"/>
+                <outlet property="nameLabel" destination="3VI-pS-Z2B" id="S79-fp-ml7"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="60.267857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
