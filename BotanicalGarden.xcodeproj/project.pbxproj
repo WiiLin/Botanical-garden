@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */; };
 		2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */; };
 		2835C4542623F63A00F1F34C /* BotanicalGardenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */; };
+		2835C4712623FC4E00F1F34C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4702623FC4E00F1F34C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2835C4712623FC4E00F1F34C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = BotanicalGarden;
+			packageProductDependencies = (
+				2835C4702623FC4E00F1F34C /* Alamofire */,
+			);
 			productName = BotanicalGarden;
 			productReference = 2835C42E2623F63900F1F34C /* BotanicalGarden.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 2835C4252623F63900F1F34C;
+			packageReferences = (
+				2835C46F2623FC4E00F1F34C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2835C42F2623F63900F1F34C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2835C46F2623FC4E00F1F34C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2835C4702623FC4E00F1F34C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2835C46F2623FC4E00F1F34C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2835C4262623F63900F1F34C /* Project object */;
 }
