@@ -5,8 +5,8 @@
 //  Created by Wii Lin on 2021/4/12.
 //
 
-import XCTest
 @testable import BotanicalGarden
+import XCTest
 
 class BGApiTest: XCTestCase {
     let apiCenter: BGRequestProtocol = BGApiCenter()
@@ -75,5 +75,4 @@ class BGApiTest: XCTestCase {
             }
         }
     }
-
 }

@@ -5,8 +5,8 @@
 //  Created by Wii Lin on 2021/4/13.
 //
 
-import XCTest
 @testable import BotanicalGarden
+import XCTest
 
 class BGMainModelTest: XCTestCase {
     let viewModel: BGMainViewModel = BGMainViewModel(apiCenter: BGApiCenter())
@@ -21,12 +21,11 @@ class BGMainModelTest: XCTestCase {
     func testNeedLoadMore() throws {
         XCTAssertFalse(viewModel.needLoadMore(indexPath: IndexPath(row: 0, section: 0)))
     }
-    
+
     func testLoadingFlag() throws {
         viewModel.loadNextPageData { success in }
         XCTAssertTrue(viewModel.isLoading)
     }
-    
 
     func testLoadNextPageData() throws {
         let offset = viewModel.currentOffset
@@ -46,25 +45,23 @@ class BGMainModelTest: XCTestCase {
             }
         }
     }
-    
+
     func testContentOffset() throws {
         let downRange = viewModel.updateContentOffset(contentOffset: .init(x: 0, y: BGNavigationBar.height / 2.0))
         XCTAssertTrue(downRange == .zero)
-        
+
         let upRange = viewModel.updateContentOffset(contentOffset: .init(x: 0, y: BGNavigationBar.height))
         XCTAssertTrue(upRange == .init(x: 0, y: BGNavigationBar.height))
-        
+
         let outOfRange = viewModel.updateContentOffset(contentOffset: .init(x: 0, y: BGNavigationBar.height + 10))
         XCTAssertTrue(outOfRange == nil)
     }
-    
+
     func testTitleViewTopConstraint() throws {
         let offset = viewModel.updateTitleViewTopConstraint(contentOffset: .init(x: 0, y: 0))
         XCTAssertTrue(offset == BGNavigationBar.height)
-       
+
         let zeroOffset = viewModel.updateTitleViewTopConstraint(contentOffset: .init(x: 0, y: BGNavigationBar.height))
         XCTAssertTrue(zeroOffset == 0)
-
     }
-
 }

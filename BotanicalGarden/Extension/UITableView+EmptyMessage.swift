@@ -46,5 +46,3 @@ extension UITableView {
         backgroundView = nil
     }
 }
-
-

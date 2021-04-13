@@ -10,26 +10,27 @@ import UIKit
 typealias BGResultHandler = ((Bool) -> Void)?
 protocol TMainViewModelDelegate: class {
     func loadDataCompleted()
-    func loadNextPageDataCompleted(indexPaths:[IndexPath])
+    func loadNextPageDataCompleted(indexPaths: [IndexPath])
     func loadDataError(error: BGError)
     func loadingData()
 }
 
 class BGMainViewModel {
     // MARK: - init
+
     init(apiCenter: BGRequestProtocol) {
         self.apiCenter = apiCenter
     }
 
     // MARK: - Properties
+
     let page: UInt = 20
     private(set) var currentOffset: UInt = 0
     private(set) var isFinished: Bool = false
     private(set) var isLoading: Bool = false
     private let apiCenter: BGRequestProtocol
     var dataSource: [BGBotanical] = []
-    
-    
+
     weak var delegate: TMainViewModelDelegate? {
         didSet {
             loadData(offset: 0)
@@ -49,10 +50,10 @@ class BGMainViewModel {
     func loadNextPageData(resultHandler: BGResultHandler = nil) {
         loadData(offset: currentOffset + page, resultHandler: resultHandler)
     }
-    
+
     func updateContentOffset(contentOffset: CGPoint) -> CGPoint? {
-        let downRange = 0.0...BGNavigationBar.height / 2.0
-        let upRange = ((BGNavigationBar.height / 2.0) + 1.0)...BGNavigationBar.height
+        let downRange = 0.0 ... BGNavigationBar.height / 2.0
+        let upRange = ((BGNavigationBar.height / 2.0) + 1.0) ... BGNavigationBar.height
         if downRange.contains(contentOffset.y) {
             return .zero
         } else if upRange.contains(contentOffset.y) {
@@ -61,7 +62,7 @@ class BGMainViewModel {
             return nil
         }
     }
-    
+
     func updateTitleViewTopConstraint(contentOffset: CGPoint) -> CGFloat {
         let offset = BGNavigationBar.height - contentOffset.y
         if offset <= 0 {
@@ -71,11 +72,10 @@ class BGMainViewModel {
         }
         return offset
     }
-
-   
 }
 
 // MARK: - Private
+
 private extension BGMainViewModel {
     func loadData(offset: UInt, resultHandler: BGResultHandler = nil) {
         guard isFinished == false else { return }
@@ -95,7 +95,7 @@ private extension BGMainViewModel {
                     let count = self.dataSource.count
                     var indexPath: [IndexPath] = []
                     self.dataSource += response.result.results
-                    for index in count..<self.dataSource.count {
+                    for index in count ..< self.dataSource.count {
                         indexPath.append(IndexPath(row: index, section: 0))
                     }
                     self.delegate?.loadNextPageDataCompleted(indexPaths: indexPath)

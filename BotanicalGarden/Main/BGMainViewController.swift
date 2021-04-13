@@ -5,22 +5,23 @@
 //  Created by Wii Lin on 2021/4/12.
 //
 
-import UIKit
 import PKHUD
+import UIKit
 
 class BGMainViewController: UIViewController, AlertPresentable {
-
     // MARK: - Properties
+
     @IBOutlet private var tableView: UITableView! {
         didSet {
             tableView.tableHeaderView = UIView(frame: .init(x: 0, y: 0, width: 0, height: CGFloat.leastNonzeroMagnitude))
             tableView.register(UINib(nibName: "\(BGMainCell.self)", bundle: nil), forCellReuseIdentifier: "\(BGMainCell.self)")
         }
     }
-    @IBOutlet weak var titleViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet var titleViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet var titleLabel: UILabel!
     let navigationBar: BGNavigationBar = Bundle.main.loadNibNamed("\(BGNavigationBar.self)", owner: self, options: nil)!.first as! BGNavigationBar
-    
+
     // MARK: - Properties
 
     private let viewModel: BGMainViewModel = BGMainViewModel(apiCenter: BGApiCenter())
@@ -35,6 +36,7 @@ class BGMainViewController: UIViewController, AlertPresentable {
 }
 
 // MARK: - private method
+
 private extension BGMainViewController {
     func setupNavigationBar() {
         view.insertSubview(navigationBar, belowSubview: tableView)
@@ -104,19 +106,18 @@ extension BGMainViewController: TMainViewModelDelegate {
     }
 }
 
-
 extension BGMainViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateTitleViewLayout(scrollView)
     }
-    
+
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         guard let update = viewModel.updateContentOffset(contentOffset: scrollView.contentOffset) else {
             return
         }
         scrollView.setContentOffset(update, animated: true)
     }
-    
+
     func updateTitleViewLayout(_ scrollView: UIScrollView) {
         let offset = viewModel.updateTitleViewTopConstraint(contentOffset: scrollView.contentOffset)
         titleViewTopConstraint.constant = offset

@@ -5,8 +5,8 @@
 //  Created by Wii Lin on 2021/4/13.
 //
 
-import XCTest
 @testable import BotanicalGarden
+import XCTest
 
 class BGFakeApiTest: XCTestCase {
     let viewModel: BGMainViewModel = BGMainViewModel(apiCenter: BGFakeApiCenter())
@@ -17,7 +17,7 @@ class BGFakeApiTest: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-    
+
     func testIsFinished() throws {
         let apiExpectation = expectation(description: "apiExpectation")
         viewModel.loadNextPageData { [weak self] success in
@@ -35,9 +35,4 @@ class BGFakeApiTest: XCTestCase {
             }
         }
     }
-
-    
-    
-
-
 }

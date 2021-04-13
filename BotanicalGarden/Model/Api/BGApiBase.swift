@@ -15,15 +15,15 @@ enum BGApiNotification {
 
 public class BGApiBase: NSObject {
     // MARK: - Properties
-    
+
     private let jsonDecoder: JSONDecoder = JSONDecoder()
-    
+
     private var baseURLComponents: URLComponents = {
         let url = URL(string: "https://data.taipei/")!
         var urlComponents: URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
         return urlComponents
     }()
-    
+
     private let sessionManager: Session = {
         let session = Session.default
         session.session.configuration.timeoutIntervalForRequest = 60
@@ -42,7 +42,7 @@ extension BGApiBase {
             completionHandler(.failure(.urlCreateError))
             return
         }
-        
+
         let finalParameters: Parameters? = {
             if let requestType = api.request, let parameters = requestType.parameters, !parameters.isEmpty {
                 return parameters
@@ -93,7 +93,7 @@ private extension BGApiBase {
                 case let .success(response):
                     completionHandler(.success(response))
                 case let .failure(error):
-                    if case let  .requestRetryFailed(retryError, _) = error.asAFError, retryError is BGError{
+                    if case let .requestRetryFailed(retryError, _) = error.asAFError, retryError is BGError {
                         completionHandler(.failure(retryError as! BGError))
                     } else {
                         let responseError = error as NSError
@@ -108,24 +108,23 @@ private extension BGApiBase {
                             completionHandler(.failure(BGError.nsError(error: responseError)))
                         }
                     }
-                    
                 }
             }
     }
-    
+
     func printResponse(response: AFDataResponse<Data?>, parameters: Parameters?, method: HTTPMethod) {
         print("🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻🤟🏻")
         print("✈️ \(response.request?.url?.absoluteString ?? "")")
         print("⚙️ \(method.rawValue)")
         let allHTTPHeaderFields = response.request?.allHTTPHeaderFields ?? [:]
         print("📇 \(allHTTPHeaderFields)")
-        
+
         let parameters = parameters ?? [:]
         print("🎒 \(parameters)")
-        
+
         let statusCode = response.response?.statusCode ?? -1
         print("🚥 \(statusCode)")
-        
+
         if let data = response.data {
             print("🎁 \(String(decoding: data, as: UTF8.self))")
         }
@@ -139,14 +138,14 @@ extension BGApiBase: RequestInterceptor {
     public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         completion(.success(urlRequest))
     }
-    
+
     public func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
         completion(.doNotRetryWithError(error))
     }
 }
 
-
 // MARK: - Alamofire+Custom
+
 private extension Encodable {
     var parameters: Parameters? {
         let jsonEncoder = JSONEncoder()
@@ -157,6 +156,7 @@ private extension Encodable {
 }
 
 // MARK: - Data+Dictionary
+
 private extension Data {
     var jsonDataDictionary: [String: Any]? {
         do {
