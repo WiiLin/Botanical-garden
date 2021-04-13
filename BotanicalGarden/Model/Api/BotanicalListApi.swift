@@ -1,5 +1,5 @@
 //
-//  BGApi.swift
+//  BotanicalListApi.swift
 //  BotanicalGarden
 //
 //  Created by Wii Lin on 2021/4/12.
@@ -9,14 +9,6 @@ import Alamofire
 import Foundation
 
 struct BGEmpty: Codable {}
-
-protocol BGApi {
-    associatedtype ResponseType: Decodable
-    var request: Encodable? { get }
-    var path: String  { get }
-    var method: HTTPMethod { get }
-    var headers: HTTPHeaders? { get }
-}
 
 struct BotanicalListApi:BGApi, Encodable {
     typealias ResponseType = Response

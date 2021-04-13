@@ -7,11 +7,6 @@
 
 import Foundation
 
-
-protocol BGRequestProtocol {
-    func getBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<BotanicalListApi.ResponseType, BGError>) -> Void)
-}
-
 class BGApiCenter: BGApiBase,BGRequestProtocol {
     func getBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<BotanicalListApi.ResponseType, BGError>) -> Void) {
         let api = BotanicalListApi(scope: "resourceAquire", q: "", limit: limit, offset: offset)

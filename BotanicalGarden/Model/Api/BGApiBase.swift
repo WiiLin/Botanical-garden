@@ -154,15 +154,6 @@ private extension Encodable {
         guard let data = try? jsonEncoder.encode(self) else { return nil }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? Parameters }
     }
-    
-    var queryItems: [URLQueryItem]? {
-        guard let parameters = parameters, !parameters.isEmpty else { return nil }
-        var items: [URLQueryItem] = []
-        for (key, value) in parameters {
-            items.append(URLQueryItem(name: key, value: value as? String))
-        }
-        return items
-    }
 }
 
 // MARK: - Data+Dictionary

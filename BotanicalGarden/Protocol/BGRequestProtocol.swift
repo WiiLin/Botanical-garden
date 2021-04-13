@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol BGRequestProtocol {
+    func getBotanicalList(limit: UInt, offset: UInt, completionHandler: @escaping (Result<BotanicalListApi.ResponseType, BGError>) -> Void)
+}

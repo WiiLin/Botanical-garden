@@ -19,7 +19,7 @@
 		2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4872624139900F1F34C /* BGApiCenter.swift */; };
 		2835C4922624139900F1F34C /* BGApiBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C48A2624139900F1F34C /* BGApiBase.swift */; };
 		2835C4B12624169B00F1F34C /* BGApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B02624169A00F1F34C /* BGApiPath.swift */; };
-		2835C4B9262418F800F1F34C /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BGApi.swift */; };
+		2835C4B9262418F800F1F34C /* BotanicalListApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4B8262418F800F1F34C /* BotanicalListApi.swift */; };
 		2835C4C82624331D00F1F34C /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4C72624331D00F1F34C /* PKHUD */; };
 		2835C4CE2624335600F1F34C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4CD2624335600F1F34C /* Kingfisher */; };
 		2835C4E02624377C00F1F34C /* BGMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4DE2624377C00F1F34C /* BGMainCell.swift */; };
@@ -31,9 +31,10 @@
 		2850C5A72625349000014053 /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 2850C5A62625349000014053 /* Test.json */; };
 		2850C5AC2625352900014053 /* Bundle+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5AB2625352900014053 /* Bundle+Data.swift */; };
 		2850C5B9262538D000014053 /* BGFakeApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5B8262538D000014053 /* BGFakeApiTest.swift */; };
+		2850C5C726253CB400014053 /* BGRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5C626253CB400014053 /* BGRequestProtocol.swift */; };
+		2850C5CC26253D0800014053 /* BGApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5CB26253D0800014053 /* BGApi.swift */; };
 		286E8E432624B6B900DE9517 /* BGMainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E8E422624B6B900DE9517 /* BGMainModelTest.swift */; };
 		286E8E482624BFE400DE9517 /* BGFakeApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E8E472624BFE400DE9517 /* BGFakeApiCenter.swift */; };
-		28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37D626245317008035A9 /* BGNavigationController.swift */; };
 		28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37F3262486F0008035A9 /* BGNavigationBar.swift */; };
 		28ED380126248714008035A9 /* BGNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28ED380026248714008035A9 /* BGNavigationBar.xib */; };
 /* End PBXBuildFile section */
@@ -73,7 +74,7 @@
 		2835C4872624139900F1F34C /* BGApiCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiCenter.swift; sourceTree = "<group>"; };
 		2835C48A2624139900F1F34C /* BGApiBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGApiBase.swift; sourceTree = "<group>"; };
 		2835C4B02624169A00F1F34C /* BGApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApiPath.swift; sourceTree = "<group>"; };
-		2835C4B8262418F800F1F34C /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
+		2835C4B8262418F800F1F34C /* BotanicalListApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalListApi.swift; sourceTree = "<group>"; };
 		2835C4DE2624377C00F1F34C /* BGMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainCell.swift; sourceTree = "<group>"; };
 		2835C4DF2624377C00F1F34C /* BGMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGMainCell.xib; sourceTree = "<group>"; };
 		2835C4E5262439A900F1F34C /* BGMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainViewModel.swift; sourceTree = "<group>"; };
@@ -82,9 +83,10 @@
 		2850C5A62625349000014053 /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
 		2850C5AB2625352900014053 /* Bundle+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Data.swift"; sourceTree = "<group>"; };
 		2850C5B8262538D000014053 /* BGFakeApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGFakeApiTest.swift; sourceTree = "<group>"; };
+		2850C5C626253CB400014053 /* BGRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGRequestProtocol.swift; sourceTree = "<group>"; };
+		2850C5CB26253D0800014053 /* BGApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApi.swift; sourceTree = "<group>"; };
 		286E8E422624B6B900DE9517 /* BGMainModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainModelTest.swift; sourceTree = "<group>"; };
 		286E8E472624BFE400DE9517 /* BGFakeApiCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGFakeApiCenter.swift; sourceTree = "<group>"; };
-		28ED37D626245317008035A9 /* BGNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationController.swift; sourceTree = "<group>"; };
 		28ED37F3262486F0008035A9 /* BGNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationBar.swift; sourceTree = "<group>"; };
 		28ED380026248714008035A9 /* BGNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGNavigationBar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,7 +194,7 @@
 				2835C4872624139900F1F34C /* BGApiCenter.swift */,
 				2835C4852624139900F1F34C /* BGError.swift */,
 				2835C4B02624169A00F1F34C /* BGApiPath.swift */,
-				2835C4B8262418F800F1F34C /* BGApi.swift */,
+				2835C4B8262418F800F1F34C /* BotanicalListApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -212,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				2835C4EB26243B7700F1F34C /* AlertPresentable.swift */,
+				2850C5C626253CB400014053 /* BGRequestProtocol.swift */,
+				2850C5CB26253D0800014053 /* BGApi.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -236,7 +240,6 @@
 		28ED37D5262452DA008035A9 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				28ED37D626245317008035A9 /* BGNavigationController.swift */,
 				28ED37F3262486F0008035A9 /* BGNavigationBar.swift */,
 				28ED380026248714008035A9 /* BGNavigationBar.xib */,
 			);
@@ -389,14 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */,
 				2835C4922624139900F1F34C /* BGApiBase.swift in Sources */,
 				2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */,
+				2850C5C726253CB400014053 /* BGRequestProtocol.swift in Sources */,
 				2850C5AC2625352900014053 /* Bundle+Data.swift in Sources */,
 				28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */,
-				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
+				2835C4B9262418F800F1F34C /* BotanicalListApi.swift in Sources */,
 				2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */,
 				2835C48F2624139900F1F34C /* BGApiCenter.swift in Sources */,
+				2850C5CC26253D0800014053 /* BGApi.swift in Sources */,
 				2835C4E02624377C00F1F34C /* BGMainCell.swift in Sources */,
 				2835C4362623F63900F1F34C /* BGMainViewController.swift in Sources */,
 				2835C48D2624139900F1F34C /* BGError.swift in Sources */,
