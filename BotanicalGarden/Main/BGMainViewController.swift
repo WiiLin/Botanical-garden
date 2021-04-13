@@ -19,11 +19,11 @@ class BGMainViewController: UIViewController, AlertPresentable {
     }
     @IBOutlet weak var titleViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
-    var navigationBar: BGNavigationBar!
+    let navigationBar: BGNavigationBar = Bundle.main.loadNibNamed("\(BGNavigationBar.self)", owner: self, options: nil)!.first as! BGNavigationBar
     
     // MARK: - Properties
 
-    private let viewModel: BGMainViewModel = BGMainViewModel()
+    private let viewModel: BGMainViewModel = BGMainViewModel(apiCenter: BGApiCenter())
 
     // MARK: - Life Cycle
 
@@ -37,7 +37,6 @@ class BGMainViewController: UIViewController, AlertPresentable {
 // MARK: - private method
 private extension BGMainViewController {
     func setupNavigationBar() {
-        navigationBar = Bundle.main.loadNibNamed("\(BGNavigationBar.self)", owner: self, options: nil)!.first as! BGNavigationBar
         view.insertSubview(navigationBar, belowSubview: tableView)
         navigationBar.snp.makeConstraints { make in
             make.left.right.equalToSuperview()

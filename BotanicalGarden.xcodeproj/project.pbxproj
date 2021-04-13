@@ -12,7 +12,7 @@
 		2835C4392623F63900F1F34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2835C4372623F63900F1F34C /* Main.storyboard */; };
 		2835C43B2623F63A00F1F34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2835C43A2623F63A00F1F34C /* Assets.xcassets */; };
 		2835C43E2623F63A00F1F34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2835C43C2623F63A00F1F34C /* LaunchScreen.storyboard */; };
-		2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */; };
+		2835C4492623F63A00F1F34C /* BGApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4482623F63A00F1F34C /* BGApiTest.swift */; };
 		2835C4542623F63A00F1F34C /* BotanicalGardenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */; };
 		2835C4712623FC4E00F1F34C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4702623FC4E00F1F34C /* Alamofire */; };
 		2835C48D2624139900F1F34C /* BGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4852624139900F1F34C /* BGError.swift */; };
@@ -28,6 +28,11 @@
 		2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4EB26243B7700F1F34C /* AlertPresentable.swift */; };
 		2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */; };
 		2835C4FB26243C5400F1F34C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2835C4FA26243C5400F1F34C /* SnapKit */; };
+		2850C5A72625349000014053 /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 2850C5A62625349000014053 /* Test.json */; };
+		2850C5AC2625352900014053 /* Bundle+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5AB2625352900014053 /* Bundle+Data.swift */; };
+		2850C5B9262538D000014053 /* BGFakeApiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2850C5B8262538D000014053 /* BGFakeApiTest.swift */; };
+		286E8E432624B6B900DE9517 /* BGMainModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E8E422624B6B900DE9517 /* BGMainModelTest.swift */; };
+		286E8E482624BFE400DE9517 /* BGFakeApiCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286E8E472624BFE400DE9517 /* BGFakeApiCenter.swift */; };
 		28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37D626245317008035A9 /* BGNavigationController.swift */; };
 		28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28ED37F3262486F0008035A9 /* BGNavigationBar.swift */; };
 		28ED380126248714008035A9 /* BGNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28ED380026248714008035A9 /* BGNavigationBar.xib */; };
@@ -59,7 +64,7 @@
 		2835C43D2623F63A00F1F34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2835C43F2623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2835C4442623F63A00F1F34C /* BotanicalGardenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotanicalGardenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalGardenTests.swift; sourceTree = "<group>"; };
+		2835C4482623F63A00F1F34C /* BGApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGApiTest.swift; sourceTree = "<group>"; };
 		2835C44A2623F63A00F1F34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2835C44F2623F63A00F1F34C /* BotanicalGardenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BotanicalGardenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2835C4532623F63A00F1F34C /* BotanicalGardenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotanicalGardenUITests.swift; sourceTree = "<group>"; };
@@ -74,6 +79,11 @@
 		2835C4E5262439A900F1F34C /* BGMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainViewModel.swift; sourceTree = "<group>"; };
 		2835C4EB26243B7700F1F34C /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EmptyMessage.swift"; sourceTree = "<group>"; };
+		2850C5A62625349000014053 /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
+		2850C5AB2625352900014053 /* Bundle+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Data.swift"; sourceTree = "<group>"; };
+		2850C5B8262538D000014053 /* BGFakeApiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGFakeApiTest.swift; sourceTree = "<group>"; };
+		286E8E422624B6B900DE9517 /* BGMainModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMainModelTest.swift; sourceTree = "<group>"; };
+		286E8E472624BFE400DE9517 /* BGFakeApiCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGFakeApiCenter.swift; sourceTree = "<group>"; };
 		28ED37D626245317008035A9 /* BGNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationController.swift; sourceTree = "<group>"; };
 		28ED37F3262486F0008035A9 /* BGNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGNavigationBar.swift; sourceTree = "<group>"; };
 		28ED380026248714008035A9 /* BGNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BGNavigationBar.xib; sourceTree = "<group>"; };
@@ -148,7 +158,11 @@
 		2835C4472623F63A00F1F34C /* BotanicalGardenTests */ = {
 			isa = PBXGroup;
 			children = (
-				2835C4482623F63A00F1F34C /* BotanicalGardenTests.swift */,
+				2850C5A52625348000014053 /* Json */,
+				286E8E422624B6B900DE9517 /* BGMainModelTest.swift */,
+				2835C4482623F63A00F1F34C /* BGApiTest.swift */,
+				286E8E472624BFE400DE9517 /* BGFakeApiCenter.swift */,
+				2850C5B8262538D000014053 /* BGFakeApiTest.swift */,
 				2835C44A2623F63A00F1F34C /* Info.plist */,
 			);
 			path = BotanicalGardenTests;
@@ -206,8 +220,17 @@
 			isa = PBXGroup;
 			children = (
 				2835C4F126243C3200F1F34C /* UITableView+EmptyMessage.swift */,
+				2850C5AB2625352900014053 /* Bundle+Data.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		2850C5A52625348000014053 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				2850C5A62625349000014053 /* Test.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		28ED37D5262452DA008035A9 /* Component */ = {
@@ -348,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2850C5A72625349000014053 /* Test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +392,7 @@
 				28ED37D726245317008035A9 /* BGNavigationController.swift in Sources */,
 				2835C4922624139900F1F34C /* BGApiBase.swift in Sources */,
 				2835C4F226243C3200F1F34C /* UITableView+EmptyMessage.swift in Sources */,
+				2850C5AC2625352900014053 /* Bundle+Data.swift in Sources */,
 				28ED37F4262486F0008035A9 /* BGNavigationBar.swift in Sources */,
 				2835C4B9262418F800F1F34C /* BGApi.swift in Sources */,
 				2835C4EC26243B7700F1F34C /* AlertPresentable.swift in Sources */,
@@ -385,7 +410,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2835C4492623F63A00F1F34C /* BotanicalGardenTests.swift in Sources */,
+				2850C5B9262538D000014053 /* BGFakeApiTest.swift in Sources */,
+				2835C4492623F63A00F1F34C /* BGApiTest.swift in Sources */,
+				286E8E432624B6B900DE9517 /* BGMainModelTest.swift in Sources */,
+				286E8E482624BFE400DE9517 /* BGFakeApiCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

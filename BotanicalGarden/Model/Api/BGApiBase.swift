@@ -16,11 +16,7 @@ enum BGApiNotification {
 public class BGApiBase: NSObject {
     // MARK: - Properties
     
-    private let jsonDecoder: JSONDecoder = {
-        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }()
+    private let jsonDecoder: JSONDecoder = JSONDecoder()
     
     private var baseURLComponents: URLComponents = {
         let url = URL(string: "https://data.taipei/")!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-typealias TResultHandler = ((Bool) -> Void)?
+typealias BGResultHandler = ((Bool) -> Void)?
 protocol TMainViewModelDelegate: class {
     func loadDataCompleted()
     func loadNextPageDataCompleted(indexPaths:[IndexPath])
@@ -17,14 +17,16 @@ protocol TMainViewModelDelegate: class {
 
 class BGMainViewModel {
     // MARK: - init
-
+    init(apiCenter: BGRequestProtocol) {
+        self.apiCenter = apiCenter
+    }
 
     // MARK: - Properties
-    private let page: UInt = 20
-    private var currentOffset: UInt = 0
-    private var isFinished: Bool = false
-    private var isLoading: Bool = false
-    
+    let page: UInt = 20
+    private(set) var currentOffset: UInt = 0
+    private(set) var isFinished: Bool = false
+    private(set) var isLoading: Bool = false
+    private let apiCenter: BGRequestProtocol
     var dataSource: [BGBotanical] = []
     
     
@@ -44,14 +46,14 @@ class BGMainViewModel {
         }
     }
 
-    func loadNextPageData(resultHandler: TResultHandler = nil) {
+    func loadNextPageData(resultHandler: BGResultHandler = nil) {
         loadData(offset: currentOffset + page, resultHandler: resultHandler)
     }
     
     func updateContentOffset(contentOffset: CGPoint) -> CGPoint? {
-        let downRange = 0.0...65.0
-        let upRange = 66.0...BGNavigationBar.height
-        if downRange.contains(Double(contentOffset.y)) {
+        let downRange = 0.0...BGNavigationBar.height / 2.0
+        let upRange = ((BGNavigationBar.height / 2.0) + 1.0)...BGNavigationBar.height
+        if downRange.contains(contentOffset.y) {
             return .zero
         } else if upRange.contains(contentOffset.y) {
             return .init(x: 0, y: BGNavigationBar.height)
@@ -75,12 +77,12 @@ class BGMainViewModel {
 
 // MARK: - Private
 private extension BGMainViewModel {
-    func loadData(offset: UInt, resultHandler: TResultHandler = nil) {
+    func loadData(offset: UInt, resultHandler: BGResultHandler = nil) {
         guard isFinished == false else { return }
         guard isLoading == false else { return }
         delegate?.loadingData()
         isLoading = true
-        BGApiCenter.shared.getBGBotanicalList(limit: page, offset: offset) { [weak self] result in
+        apiCenter.getBotanicalList(limit: page, offset: offset) { [weak self] result in
             guard let self = self else { return }
             self.isLoading = false
             switch result {
@@ -99,7 +101,6 @@ private extension BGMainViewModel {
                     self.delegate?.loadNextPageDataCompleted(indexPaths: indexPath)
                 }
                 self.currentOffset = offset
-                print("\(self.dataSource.count), \(response.result.count)")
                 self.isFinished = self.dataSource.count == response.result.count
                 resultHandler?(true)
             case let .failure(error):
