@@ -19,6 +19,7 @@ class BGMainCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        coverImageView.kf.indicatorType = .activity
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,7 +29,6 @@ class BGMainCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         coverImageView.kf.cancelDownloadTask()
-        coverImageView.kf.indicatorType = .activity
     }
 
     // MARK: - Interface
