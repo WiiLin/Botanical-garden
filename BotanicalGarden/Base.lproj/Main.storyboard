@@ -28,13 +28,13 @@
                                 <rect key="frame" x="0.0" y="154" width="414" height="70"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wave" translatesAutoresizingMaskIntoConstraints="NO" id="mNE-Ec-41a">
-                                        <rect key="frame" x="0.0" y="41" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="42" width="414" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="tY3-A9-XH0"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="植物園" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHJ-6C-Ai0">
-                                        <rect key="frame" x="179.5" y="0.0" width="55.5" height="41"/>
+                                        <rect key="frame" x="179.5" y="0.0" width="55.5" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -45,7 +45,7 @@
                                     <constraint firstItem="LHJ-6C-Ai0" firstAttribute="top" secondItem="scX-pY-HHt" secondAttribute="top" id="3dS-gR-h3h"/>
                                     <constraint firstAttribute="height" constant="70" id="Ct2-uJ-Sw3"/>
                                     <constraint firstItem="mNE-Ec-41a" firstAttribute="top" secondItem="LHJ-6C-Ai0" secondAttribute="bottom" id="F5a-Zo-ras"/>
-                                    <constraint firstAttribute="bottom" secondItem="mNE-Ec-41a" secondAttribute="bottom" constant="-1" id="LgE-kA-J23"/>
+                                    <constraint firstAttribute="bottom" secondItem="mNE-Ec-41a" secondAttribute="bottom" constant="-2" id="LgE-kA-J23"/>
                                     <constraint firstItem="mNE-Ec-41a" firstAttribute="leading" secondItem="scX-pY-HHt" secondAttribute="leading" id="bhQ-Do-QOy"/>
                                     <constraint firstItem="LHJ-6C-Ai0" firstAttribute="centerX" secondItem="scX-pY-HHt" secondAttribute="centerX" id="naV-6h-3bi"/>
                                     <constraint firstAttribute="trailing" secondItem="mNE-Ec-41a" secondAttribute="trailing" id="ouW-xv-GIE"/>
